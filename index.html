@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RML Atelier — Haute Couture</title>
     <meta name="description"
-        content="Roberto Mendoza Latelier. Bespoke haute couture from Dublin — garments that outlive their season. 8 exclusive pieces, made by hand.">
+        content="Roberto Mendoza Latelier. Bespoke haute couture — garments that outlive their season. 8 exclusive pieces, made by hand.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Didact+Gothic&family=Cinzel:wght@300;400;500&display=swap"
@@ -83,6 +83,19 @@
             transform: translate(-50%, -50%);
             transition: width .3s, height .3s;
             will-change: left, top;
+        }
+
+        /* Hide custom cursor on touch / mobile devices */
+        @media (hover: none),
+        (pointer: coarse) {
+            body {
+                cursor: auto;
+            }
+
+            .cursor,
+            .cursor-ring {
+                display: none !important;
+            }
         }
 
         /* ── SCROLL REVEAL ── */
@@ -487,12 +500,12 @@
         .marquee-track {
             display: flex;
             white-space: nowrap;
-            animation: marqueeSpin 50s linear infinite;
+            animation: marqueeSpin 7s linear infinite;
         }
 
-        .marquee-strip:hover .marquee-track {
+        /* .marquee-strip:hover .marquee-track {
             animation-play-state: paused;
-        }
+        } */
 
         .marquee-segment {
             display: inline-flex;
@@ -561,11 +574,11 @@
         }
 
         .ed-2 img {
-            object-position: center 35%;
+            object-position: center 85%;
         }
 
         .ed-3 img {
-            object-position: center top;
+            object-position: center 80%;
         }
 
         /* Bottom gradient overlay */
@@ -1116,7 +1129,7 @@
 
             .hero {
                 grid-template-columns: 1fr;
-                background: url('https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9443.webp') center top / cover no-repeat;
+                background: url('https://www.rmlatelier.com/wp-content/uploads/2026/01/IMG_9283.webp') center top / cover no-repeat;
                 position: relative;
             }
 
@@ -1314,7 +1327,7 @@
     <!-- ── HERO ── -->
     <section class="hero">
         <div class="hero-left">
-            <div class="hero-eyebrow reveal">Roberto Mendoza — Dublin</div>
+            <div class="hero-eyebrow reveal">Roberto Mendoza</div>
             <h1 class="hero-title reveal d1">
                 The art<br>
                 <em>of presence.</em>
@@ -1348,7 +1361,7 @@
             </div>
         </div>
         <div class="hero-right">
-            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9443.webp"
+            <img src="https://www.rmlatelier.com/wp-content/uploads/2026/01/IMG_9283.webp"
                 alt="Gilded Divinity — RML Atelier">
             <span class="hero-img-caption">Gilded Divinity — 2025</span>
         </div>
@@ -1364,7 +1377,7 @@
             <div class="marquee-segment">
                 <span class="mq-word">Handcrafted Luxury</span><span class="mq-gem">✦</span>
                 <span class="mq-word">Haute Couture</span><span class="mq-gem">✦</span>
-                <span class="mq-word">Dublin, Ireland</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Ireland</span><span class="mq-gem">✦</span>
                 <span class="mq-word">Bespoke Tailoring</span><span class="mq-gem">✦</span>
                 <span class="mq-word">Roberto Mendoza</span><span class="mq-gem">✦</span>
                 <span class="mq-word">Timeless Elegance</span><span class="mq-gem">✦</span>
@@ -1376,7 +1389,7 @@
             <div class="marquee-segment" aria-hidden="true">
                 <span class="mq-word">Handcrafted Luxury</span><span class="mq-gem">✦</span>
                 <span class="mq-word">Haute Couture</span><span class="mq-gem">✦</span>
-                <span class="mq-word">Dublin, Ireland</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Ireland</span><span class="mq-gem">✦</span>
                 <span class="mq-word">Bespoke Tailoring</span><span class="mq-gem">✦</span>
                 <span class="mq-word">Roberto Mendoza</span><span class="mq-gem">✦</span>
                 <span class="mq-word">Timeless Elegance</span><span class="mq-gem">✦</span>
@@ -1391,7 +1404,7 @@
     <!-- ── EDITORIAL TRIPTYCH ── -->
     <div class="editorial">
         <div class="ed-block ed-1 reveal">
-            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9374.webp" alt="Black Provocateur">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9376.webp" alt="Black Provocateur">
             <div class="ed-caption">
                 <div class="ed-cap-tag">Evening Designs</div>
                 <div class="ed-cap-name">Black <em>Provocateur</em></div>
@@ -1405,7 +1418,7 @@
             </div>
         </div>
         <div class="ed-block ed-3 reveal d2">
-            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9362.webp" alt="Medea">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9359.webp" alt="Medea">
             <div class="ed-caption">
                 <div class="ed-cap-tag">Evening Designs</div>
                 <div class="ed-cap-name"><em>Medea</em></div>
@@ -1421,7 +1434,7 @@
             until it is satisfied."
         </blockquote>
         <div class="manifesto-rule reveal d2"></div>
-        <div class="manifesto-attribution reveal d2">Roberto Mendoza — RML Atelier, Dublin</div>
+        <div class="manifesto-attribution reveal d2">Roberto Mendoza — RML Atelier</div>
     </section>
 
     <!-- ── COLLECTION STRIP ── -->
@@ -1437,40 +1450,41 @@
             <div class="col-item reveal">
                 <div class="col-item-img">
                     <span class="col-num">01</span>
-                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9387.webp" alt="Emma's Ember"
-                        loading="lazy">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/08/roberto-mendoza-dress_00029.webp"
+                        alt="Lunar Groove" loading="lazy">
                     <div class="col-item-hover"><span class="col-item-hover-text">View Piece</span></div>
                 </div>
                 <div class="col-item-info">
-                    <div class="col-cat">Evening Designs</div>
-                    <div class="col-name">Emma's Ember</div>
-                    <div class="col-price">€ 3,000</div>
+                    <div class="col-cat">Lunar Groove</div>
+                    <div class="col-name">Exclusive Design</div>
+                    <div class="col-price">€ 599.00</div>
                 </div>
             </div>
             <div class="col-item reveal d1">
                 <div class="col-item-img">
                     <span class="col-num">02</span>
-                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9405.webp" alt="Golden Oracle"
-                        loading="lazy">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9352.webp"
+                        alt="Champagne Fall" loading="lazy">
                     <div class="col-item-hover"><span class="col-item-hover-text">View Piece</span></div>
                 </div>
                 <div class="col-item-info">
-                    <div class="col-cat">Evening Designs</div>
-                    <div class="col-name">Golden Oracle</div>
-                    <div class="col-price">€ 2,800</div>
+                    <div class="col-cat">Signature Pieces</div>
+                    <div class="col-name">Champagne Fall</div>
+                    <div class="col-price">€ 1,150.00</div>
                 </div>
             </div>
             <div class="col-item reveal d2">
                 <div class="col-item-img">
                     <span class="col-num">03</span>
-                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9424.webp" alt="Velvet Tide"
-                        loading="lazy">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2026/02/noir-mirage_001.webp"
+                        alt="Velvet Tide" loading="lazy">
                     <div class="col-item-hover"><span class="col-item-hover-text">View Piece</span></div>
                 </div>
                 <div class="col-item-info">
-                    <div class="col-cat">Evening Designs</div>
-                    <div class="col-name">Velvet Tide</div>
-                    <div class="col-price">€ 2,200</div>
+                    <div class="col-cat">
+                        Eveningwear</div>
+                    <div class="col-name">Noir Mirage</div>
+                    <div class="col-price">€ 599.00</div>
                 </div>
             </div>
         </div>
@@ -1501,8 +1515,7 @@
     <!-- ── DESIGNER ── -->
     <div class="designer-split">
         <div class="designer-photo">
-            <img src="https://media.rmlatelier.com/wp-content/uploads/2026/03/roberto-mendoza-003.jpeg.webp"
-                alt="Roberto Mendoza">
+            <img src="https://www.rmlatelier.com/wp-content/uploads/2026/01/IMG_9285.webp" alt="Roberto Mendoza">
         </div>
         <div class="designer-content">
             <div class="designer-tag reveal">The Designer</div>
@@ -1521,7 +1534,7 @@
     <!-- ── BESPOKE TEASER ── -->
     <div class="bespoke-strip">
         <div class="bespoke-strip-img reveal">
-            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9386.webp"
+            <img src="https://www.rmlatelier.com/wp-content/uploads/2025/08/roberto-mendoza-dress_00001.webp"
                 alt="Emma's Ember — Bespoke" loading="lazy">
         </div>
         <div class="bespoke-strip-content reveal d1">
@@ -1553,7 +1566,7 @@
             </h2>
             <p class="enter-sub reveal d2">
                 8 exclusive pieces. Bespoke commissions open.<br>
-                Dublin, Ireland — Worldwide delivery.
+                Ireland — Worldwide delivery.
             </p>
             <a href="https://www.rmlatelier.com/" class="btn-outline-gold reveal d3">
                 Enter the Atelier
@@ -1585,6 +1598,8 @@
     <script>
         // ── Custom cursor ──────────────────────────────────────────
         (function () {
+            // Skip on touch/mobile devices
+            if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
             var cursor = document.getElementById('lCursor');
             var ring = document.getElementById('lCursorRing');
             if (!cursor || !ring) return;
