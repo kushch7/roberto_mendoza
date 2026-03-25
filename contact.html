@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — RML Atelier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Didact+Gothic&family=Cinzel:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+        <a href="index.html" class="mobile-logo">RML ATELIER</a>
+        <nav class="mobile-links">
+            <a href="collections.html">Collections</a>
+            <a href="maison.html">Maison</a>
+            <a href="bespoke.html">Bespoke</a>
+            <a href="journal.html">Journal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="mobile-nav-footer">
+            <p>2 Park Street, Dublin — Ireland</p>
+            <a href="mailto:roberto.mendoza@rmlatelier.com">roberto.mendoza@rmlatelier.com</a>
+        </div>
+    </div>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- Header -->
+    <header id="header" class="preset-scrolled">
+        <a href="index.html" class="logo">RML ATELIER</a>
+        <nav>
+            <a href="collections.html">Collections</a>
+            <a href="maison.html">Maison</a>
+            <a href="bespoke.html">Bespoke</a>
+            <a href="journal.html">Journal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-icons">
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <circle cx="11" cy="11" r="8" />
+                <path d="M21 21l-4.35-4.35" />
+            </svg>
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <button class="hamburger" id="hamburger"
+                aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <div class="page-hero-label">The Atelier</div>
+        <h1 class="page-hero-title">Get in<br><em>Touch</em></h1>
+        <p class="page-hero-sub">We are available to answer any question, discuss a bespoke commission, or assist with
+            your order. Our team responds within 24 hours.</p>
+    </div>
+
+    <!-- Contact Body -->
+    <div class="contact-wrap">
+
+        <!-- Form side -->
+        <div class="contact-form-side">
+            <div class="section-label" style="margin-bottom:32px;">
+                <span class="section-label-line"></span>
+                Send a Message
+            </div>
+            <h2 class="section-title" style="margin-bottom:40px;">How Can We<br><em>Help You?</em></h2>
+            <form class="contact-form" action="#" method="post">
+                <div class="contact-form-row">
+                    <input class="contact-input" type="text" placeholder="First Name" name="fname" required>
+                    <input class="contact-input" type="text" placeholder="Last Name" name="lname" required>
+                </div>
+                <input class="contact-input" type="email" placeholder="Email Address" name="email" required>
+                <input class="contact-input" type="text" placeholder="Order Number (if applicable)" name="order">
+                <textarea class="contact-textarea" name="message" rows="6"
+                    placeholder="How can we help you?"></textarea>
+                <button class="contact-submit" type="submit">Get In Touch</button>
+            </form>
+        </div>
+
+        <!-- Info side -->
+        <div class="contact-info-side">
+            <h2 class="section-title">The<br><em>Atelier</em></h2>
+
+            <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="contact-info-label">Address</div>
+                    <div class="contact-info-value">2 Park Street<br>Dublin, Ireland</div>
+                </div>
+            </div>
+
+            <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="contact-info-label">Email</div>
+                    <div class="contact-info-value"><a
+                            href="mailto:roberto.mendoza@rmlatelier.com">roberto.mendoza@rmlatelier.com</a></div>
+                </div>
+            </div>
+
+            <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path
+                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 7.17 19.79 19.79 0 01.88 3.54 2 2 0 012.88 1.5h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 9.91A16 16 0 0016 18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="contact-info-label">Phone</div>
+                    <div class="contact-info-value">
+                        <a href="tel:+353834365947">Ireland: +353 83 436 5947</a><br>
+                        <a href="tel:+35679610590">Malta: +356 7961 0590</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="contact-info-label">Atelier Hours</div>
+                    <div class="contact-info-value">
+                        Monday – Friday: 10:00 – 18:00<br>
+                        Saturday: By appointment<br>
+                        Sunday: Closed
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top:40px;">
+                <div class="section-label" style="margin-bottom:20px;">
+                    <span class="section-label-line"></span>
+                    Follow the Maison
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61576216606576" class="footer-social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                        style="color:rgba(255,255,255,0.6)"><svg width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/roberto_mendoza_latelier_" class="footer-social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                        style="color:rgba(255,255,255,0.6)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-gold-bar"></div>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">RML ATELIER</a>
+                <p class="footer-desc">A maison built on the patience of the hand and the permanence of beauty. Garments
+                    that outlive their season.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61576216606576" class="footer-social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/roberto_mendoza_latelier_" class="footer-social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg></a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Collections</div>
+                <ul class="footer-links">
+                    <li><a href="collections.html">New Arrivals</a></li>
+                    <li><a href="collections.html">Eveningwear</a></li>
+                    <li><a href="collections.html">Gowns</a></li>
+                    <li><a href="collections.html">Dresses</a></li>
+                    <li><a href="collections.html">Exclusive Design</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Maison</div>
+                <ul class="footer-links">
+                    <li><a href="maison.html">Our Story</a></li>
+                    <li><a href="maison.html">The Designer</a></li>
+                    <li><a href="bespoke.html">Bespoke Service</a></li>
+                    <li><a href="journal.html">Journal</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Contact Us</div>
+                <ul class="footer-links">
+                    <li><a href="#">2 Park Street, Dublin — Ireland</a></li>
+                    <li><a href="mailto:roberto.mendoza@rmlatelier.com">roberto.mendoza@rmlatelier.com</a></li>
+                    <li><a href="tel:+353834365947">Ireland: +353 83 436 5947</a></li>
+                    <li><a href="tel:+35679610590">Malta: +356 7961 0590</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 Roberto Mendoza. All rights reserved.</p>
+            <p class="footer-copy" style="letter-spacing:0.05em;">Privacy · Legal · Terms</p>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+
+</html>

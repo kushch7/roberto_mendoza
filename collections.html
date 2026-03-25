@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections — RML Atelier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Didact+Gothic&family=Cinzel:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+        <a href="index.html" class="mobile-logo">RML ATELIER</a>
+        <nav class="mobile-links">
+            <a href="collections.html">Collections</a>
+            <a href="maison.html">Maison</a>
+            <a href="bespoke.html">Bespoke</a>
+            <a href="journal.html">Journal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="mobile-nav-footer">
+            <p>2 Park Street, Dublin — Ireland</p>
+            <a href="mailto:roberto.mendoza@rmlatelier.com">roberto.mendoza@rmlatelier.com</a>
+        </div>
+    </div>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- Header -->
+    <header id="header" class="preset-scrolled">
+        <a href="index.html" class="logo">RML ATELIER</a>
+        <nav>
+            <a href="collections.html">Collections</a>
+            <a href="maison.html">Maison</a>
+            <a href="bespoke.html">Bespoke</a>
+            <a href="journal.html">Journal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-icons">
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <circle cx="11" cy="11" r="8" />
+                <path d="M21 21l-4.35-4.35" />
+            </svg>
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <button class="hamburger" id="hamburger"
+                aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <img class="page-hero-bg-img" src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9443.webp"
+            alt="">
+        <div class="page-hero-label">The Atelier</div>
+        <h1 class="page-hero-title">Our <em>Collections</em></h1>
+        <p class="page-hero-sub">Discover creations where iconic silhouettes meet timeless craftsmanship. Each piece is
+            made to be worn, remembered, and never let go.</p>
+    </div>
+
+    <!-- Shop -->
+    <div class="shop-wrap">
+        <aside class="shop-sidebar">
+            <div class="filter-title">Filter by</div>
+            <ul class="filter-list">
+                <li><button class="filter-btn active" data-filter="all">All Pieces</button></li>
+                <li><button class="filter-btn" data-filter="gowns">Gowns</button></li>
+                <li><button class="filter-btn" data-filter="evening">Evening Designs</button></li>
+                <li><button class="filter-btn" data-filter="dresses">Dresses</button></li>
+                <li><button class="filter-btn" data-filter="collections">Collections</button></li>
+            </ul>
+        </aside>
+
+        <main class="shop-main">
+            <div class="shop-count"><span id="shopCount">8 pieces</span></div>
+            <div class="shop-grid">
+
+                <div class="product-card shop-card reveal" data-category="gowns">
+                    <div class="product-img p1">
+                        <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9219.webp"
+                            alt="Champagne Reign" loading="lazy">
+                    </div>
+                    <div class="product-overlay">
+                        <div class="product-category">Gowns</div>
+                        <div class="product-name">Champagne Reign</div>
+                        <div class="product-price"><span>€ 1,500</span>
+                            <div class="product-add">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card shop-card reveal reveal-delay-1" data-category="evening">
+                    <div class="product-img p2">
+                        <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9362.webp" alt="Medea"
+                            loading="lazy">
+                    </div>
+                    <div class="product-overlay">
+                        <div class="product-category">Evening Designs</div>
+                        <div class="product-name">Medea</div>
+                        <div class="product-price"><span>€ 1,200</span>
+                            <div class="product-add">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card shop-card reveal reveal-delay-2" data-category="evening">
+                    <div class="product-img p3">
+                        <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9374.webp"
+                            alt="Black Provocateur" loading="lazy">
+                    </div>
+                    <div class="product-overlay">
+                        <div class="product-category">Evening Designs</div>
+                        <div class="product-name">Black Provocateur</div>
+                        <div class="product-price"><span>€ 2,000</span>
+                            <div class="product-add">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card shop-card reveal" data-category="evening">
+                    <div class="product-img p4">
+                        <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9387.webp"
+                            alt="Emma's Ember" loading="lazy">
+                    </div>
+                    <div class="product-overlay">
+                        <div class="product-category">Evening Designs</div>
+                        <div class="product-name">Emma's Ember</div>
+                        <div class="product-price"><span>€ 3,000</span>
+                            <div class="product-add">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card shop-card reveal reveal-delay-1" data-category="evening">
+                    <div class="product-img p5">
+                        <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9405.webp"
+                            alt="Golden Oracle" loading="lazy">
+                    </div>
+                    <div class="product-overlay">
+                        <div class="product-category">Evening Designs</div>
+                        <div class="product-name">Golden Oracle</div>
+                        <div class="product-price"><span>€ 2,800</span>
+                            <div class="product-add">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card shop-card reveal reveal-delay-2" data-category="collections">
+                    <div class="product-img" style="background:var(--charcoal);">
+                        <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9424.webp"
+                            alt="Velvet Tide" loading="lazy">
+                    </div>
+                    <div class="product-overlay">
+                        <div class="product-category">Collections</div>
+                        <div class="product-name">Velvet Tide</div>
+                        <div class="product-price"><span>€ 1,100</span>
+                            <div class="product-add">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card shop-card reveal" data-category="evening">
+                    <div class="product-img" style="background:var(--charcoal);">
+                        <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9443.webp"
+                            alt="Gilded Divinity" loading="lazy">
+                    </div>
+                    <div class="product-overlay">
+                        <div class="product-category">Evening Designs</div>
+                        <div class="product-name">Gilded Divinity</div>
+                        <div class="product-price"><span>€ 3,000</span>
+                            <div class="product-add">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card shop-card reveal reveal-delay-1" data-category="dresses">
+                    <div class="product-img" style="background:var(--charcoal);">
+                        <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9458.webp"
+                            alt="Cocoa Luminara" loading="lazy">
+                    </div>
+                    <div class="product-overlay">
+                        <div class="product-category">Dresses</div>
+                        <div class="product-name">Cocoa Luminara</div>
+                        <div class="product-price"><span>€ 1,100</span>
+                            <div class="product-add">+</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Benefits -->
+    <div class="benefits">
+        <div class="benefit reveal">
+            <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.2">
+                    <path d="M5 12H19M12 5l7 7-7 7" />
+                </svg></div>
+            <div>
+                <div class="benefit-title">Fast Delivery</div>
+                <div class="benefit-desc">We ensure your order is shipped with the utmost care and speed.</div>
+            </div>
+        </div>
+        <div class="benefit reveal reveal-delay-1">
+            <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.2">
+                    <rect x="1" y="3" width="15" height="13" rx="1" />
+                    <path d="M16 8h4l3 5v3h-7V8z" />
+                    <circle cx="5.5" cy="18.5" r="2.5" />
+                    <circle cx="18.5" cy="18.5" r="2.5" />
+                </svg></div>
+            <div>
+                <div class="benefit-title">Free Shipping</div>
+                <div class="benefit-desc">Enjoy our free shipping service. Fast. Reliable. Free.</div>
+            </div>
+        </div>
+        <div class="benefit reveal reveal-delay-2">
+            <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.2">
+                    <path d="M9 12l2 2 4-4" />
+                    <circle cx="12" cy="12" r="10" />
+                </svg></div>
+            <div>
+                <div class="benefit-title">Money-Back Guaranteed</div>
+                <div class="benefit-desc">We stand by our creations, and will provide a full refund if you are not
+                    delighted.</div>
+            </div>
+        </div>
+        <div class="benefit reveal reveal-delay-3">
+            <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.2">
+                    <path
+                        d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 7.17 19.79 19.79 0 01.88 3.54 2 2 0 012.88 1.5h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 9.91A16 16 0 0016 18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                </svg></div>
+            <div>
+                <div class="benefit-title">Personalized Assistance</div>
+                <div class="benefit-desc">Our team is at your service. Contact us with any inquiries you may have.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <p class="newsletter-eyebrow">Private Circle</p>
+        <h2 class="newsletter-title">First to the<br>Atelier</h2>
+        <p class="newsletter-sub">Private previews. New collections before the world.<br>Invitations to our seasonal
+            salons.</p>
+        <div class="newsletter-form">
+            <input class="newsletter-input" type="email" placeholder="Your email address">
+            <button class="newsletter-btn">Join</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-gold-bar"></div>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">RML ATELIER</a>
+                <p class="footer-desc">A maison built on the patience of the hand and the permanence of beauty. Garments
+                    that outlive their season.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61576216606576" class="footer-social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/roberto_mendoza_latelier_" class="footer-social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg></a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Collections</div>
+                <ul class="footer-links">
+                    <li><a href="collections.html">New Arrivals</a></li>
+                    <li><a href="collections.html">Eveningwear</a></li>
+                    <li><a href="collections.html">Gowns</a></li>
+                    <li><a href="collections.html">Dresses</a></li>
+                    <li><a href="collections.html">Exclusive Design</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Maison</div>
+                <ul class="footer-links">
+                    <li><a href="maison.html">Our Story</a></li>
+                    <li><a href="maison.html">The Designer</a></li>
+                    <li><a href="bespoke.html">Bespoke Service</a></li>
+                    <li><a href="journal.html">Journal</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Contact Us</div>
+                <ul class="footer-links">
+                    <li><a href="#">2 Park Street, Dublin — Ireland</a></li>
+                    <li><a href="mailto:roberto.mendoza@rmlatelier.com">roberto.mendoza@rmlatelier.com</a></li>
+                    <li><a href="tel:+353834365947">Ireland: +353 83 436 5947</a></li>
+                    <li><a href="tel:+35679610590">Malta: +356 7961 0590</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 Roberto Mendoza. All rights reserved.</p>
+            <p class="footer-copy" style="letter-spacing:0.05em;">Privacy · Legal · Terms</p>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+
+</html>

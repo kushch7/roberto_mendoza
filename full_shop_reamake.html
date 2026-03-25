@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RML Atelier — Timeless Couture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Didact+Gothic&family=Cinzel:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+        <a href="index.html" class="mobile-logo">RML ATELIER</a>
+        <nav class="mobile-links">
+            <a href="collections.html">Collections</a>
+            <a href="maison.html">Maison</a>
+            <a href="bespoke.html">Bespoke</a>
+            <a href="journal.html">Journal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="mobile-nav-footer">
+            <p>2 Park Street, Dublin — Ireland</p>
+            <a href="mailto:roberto.mendoza@rmlatelier.com">roberto.mendoza@rmlatelier.com</a>
+        </div>
+    </div>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- ── HEADER ── -->
+    <header id="header">
+        <a href="index.html" class="logo">RML ATELIER</a>
+        <nav>
+            <a href="collections.html">Collections</a>
+            <a href="maison.html">Maison</a>
+            <a href="bespoke.html">Bespoke</a>
+            <a href="journal.html">Journal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-icons">
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <circle cx="11" cy="11" r="8" />
+                <path d="M21 21l-4.35-4.35" />
+            </svg>
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-num">25</div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Collection Printemps — 2025</p>
+            <h1 class="hero-title">
+                Not made to<br>
+                follow <em>seasons</em>
+            </h1>
+            <p class="hero-desc">
+                Made to alter presence. Created for those who value detail, craftsmanship, and lasting elegance.
+            </p>
+            <div class="hero-cta">
+                <a href="collections.html" class="btn-primary">Explore Collection</a>
+                <a href="maison.html" class="btn-ghost">Our Maison</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ── MARQUEE ── -->
+    <div class="marquee-wrap">
+        <div class="marquee">
+            <span class="marquee-item">Handcrafted Luxury <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Bespoke Tailoring <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Timeless Elegance <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Artisanal Excellence <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Quiet Luxury <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Parisian Heritage <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Handcrafted Luxury <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Bespoke Tailoring <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Timeless Elegance <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Artisanal Excellence <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Quiet Luxury <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Parisian Heritage <span class="marquee-dot"></span></span>
+        </div>
+    </div>
+
+    <!-- ── FEATURED SPLIT ── -->
+    <div class="featured-split">
+        <div class="featured-split-item">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9362.webp"
+                alt="Medea — Elevate your confidence" loading="lazy">
+            <div class="featured-split-overlay">
+                <h3 class="featured-split-title">Elevate your confidence.<br><em>Embrace true elegance.</em></h3>
+                <a href="collections.html" class="btn-primary">Shop Now</a>
+            </div>
+        </div>
+        <div class="featured-split-item">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9443.webp"
+                alt="Gilded Divinity — Unveil your grace" loading="lazy">
+            <div class="featured-split-overlay">
+                <h3 class="featured-split-title">Unveil your grace.<br><em>The power of natural beauty.</em></h3>
+                <a href="collections.html" class="btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── PHILOSOPHY ── -->
+    <section>
+        <div class="philosophy">
+            <div class="philosophy-left reveal">
+                <div class="section-label">Our Philosophy</div>
+                <h2 class="section-title">Craft that<br>endures <em>time</em></h2>
+                <p class="philosophy-text">
+                    We do not follow seasons. We follow the discipline of the hand, the patience of the artisan, and the
+                    quiet confidence of those who wear our work.
+                </p>
+                <p class="philosophy-detail">
+                    Founded on the principles of haute couture, RML Atelier is a sanctuary for those who understand that
+                    true luxury is felt, never displayed. Each garment passes through sixteen hands before it reaches
+                    yours.
+                </p>
+                <br><br>
+                <a href="maison.html" class="btn-primary" style="background:var(--ink); color:var(--warm-white);">Our
+                    Story</a>
+            </div>
+            <div class="philosophy-right reveal reveal-delay-2">
+                <div class="philosophy-accent"></div>
+                <div class="philosophy-img-frame">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9376.webp"
+                        alt="Black Provocateur — Artisan craftsmanship" loading="lazy">
+                </div>
+                <div class="philosophy-stat">
+                    <div class="stat-num">16</div>
+                    <div class="stat-label">Artisan hands per garment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── COLLECTIONS ── -->
+    <section class="collections">
+        <div class="collections-header reveal">
+            <div>
+                <div class="section-label">The Collection</div>
+                <h2 class="section-title">New <em>Arrivals</em></h2>
+            </div>
+            <a href="collections.html" class="view-all">View All Pieces</a>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card reveal">
+                <div class="product-img p1">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9219.webp"
+                        alt="Champagne Reign" loading="lazy">
+                </div>
+                <div class="product-overlay">
+                    <div class="product-category">Eveningwear</div>
+                    <div class="product-name">Champagne Reign</div>
+                    <div class="product-price">
+                        <span>€ 1,500</span>
+                        <div class="product-add">+</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card reveal reveal-delay-1">
+                <div class="product-img p2">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9362.webp" alt="Medea"
+                        loading="lazy">
+                </div>
+                <div class="product-overlay">
+                    <div class="product-category">Eveningwear</div>
+                    <div class="product-name">Medea</div>
+                    <div class="product-price">
+                        <span>€ 1,200</span>
+                        <div class="product-add">+</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card reveal reveal-delay-2">
+                <div class="product-img p3">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9374.webp"
+                        alt="Black Provocateur" loading="lazy">
+                </div>
+                <div class="product-overlay">
+                    <div class="product-category">Eveningwear</div>
+                    <div class="product-name">Black Provocateur</div>
+                    <div class="product-price">
+                        <span>€ 2,000</span>
+                        <div class="product-add">+</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card reveal reveal-delay-1">
+                <div class="product-img p4">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9387.webp" alt="Emma's Ember"
+                        loading="lazy">
+                </div>
+                <div class="product-overlay">
+                    <div class="product-category">Couture</div>
+                    <div class="product-name">Emma's Ember</div>
+                    <div class="product-price">
+                        <span>€ 3,000</span>
+                        <div class="product-add">+</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card reveal reveal-delay-2">
+                <div class="product-img p5">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9405.webp" alt="Golden Oracle"
+                        loading="lazy">
+                </div>
+                <div class="product-overlay">
+                    <div class="product-category">Couture</div>
+                    <div class="product-name">Golden Oracle</div>
+                    <div class="product-price">
+                        <span>€ 2,800</span>
+                        <div class="product-add">+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── VALUES ── -->
+    <section class="values">
+        <div class="values-header reveal">
+            <div class="section-label" style="justify-content:center; margin-bottom:16px;">Our Essence</div>
+            <h2 class="section-title">Effortless elegance,<br>every single <em>day</em></h2>
+        </div>
+        <div class="values-grid">
+            <div class="value-card reveal">
+                <div class="value-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M12 2C8.5 6 4 8 4 13a8 8 0 0 0 16 0c0-5-4.5-7-8-11z" />
+                    </svg>
+                </div>
+                <h3 class="value-title">Elegance</h3>
+                <p class="value-desc">Elegance is a confident force that honors the female form. We sculpt silhouettes
+                    with intentional lines, ensuring every woman feels powerful and untouchable.</p>
+            </div>
+            <div class="value-card reveal reveal-delay-1">
+                <div class="value-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                </div>
+                <h3 class="value-title">Class</h3>
+                <p class="value-desc">True class lives in meticulous details and exceptional fabrics. Every garment is
+                    shaped by hand through the noble language of Alta Costura, crafted for those who demand natural
+                    authority.</p>
+            </div>
+            <div class="value-card reveal reveal-delay-2">
+                <div class="value-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                </div>
+                <h3 class="value-title">Natural</h3>
+                <p class="value-desc">Authentic beauty emerges when a dress reflects a woman's soul. A Mendoza gown is
+                    made for a lifetime, carrying memories and identity — powerful every time she returns to it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CRAFT ── -->
+    <section class="craft">
+        <div class="craft-visuals">
+            <div class="craft-gold-line"></div>
+            <div class="craft-img ci1">
+                <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9378.webp"
+                    alt="Emma's Ember detail" loading="lazy">
+            </div>
+            <div class="craft-img ci2">
+                <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9359.webp"
+                    alt="Medea fabric detail" loading="lazy">
+            </div>
+            <div class="craft-img ci3">
+                <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9421.webp"
+                    alt="Velvet Tide craftsmanship" loading="lazy">
+            </div>
+        </div>
+
+        <div class="craft-text reveal">
+            <div class="craft-section-label">Our Craft</div>
+            <h2 class="craft-title">The <em>art</em> of<br>measured making</h2>
+            <p class="craft-desc">
+                In a world accelerating past itself, we move deliberately. Each stitch is a decision. Each seam a
+                commitment. This is not production — this is devotion.
+            </p>
+            <div class="craft-pillars">
+                <div class="pillar">
+                    <div class="pillar-num">I</div>
+                    <div>
+                        <div class="pillar-title">Fabric Selection</div>
+                        <div class="pillar-desc">Only the finest mills in Europe and Japan. Every textile is touched,
+                            weighted, and considered before it becomes a garment.</div>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-num">II</div>
+                    <div>
+                        <div class="pillar-title">Pattern Making</div>
+                        <div class="pillar-desc">Patterns are hand-drafted by our ateliers, shaped around the body's
+                            natural architecture, not industrial templates.</div>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-num">III</div>
+                    <div>
+                        <div class="pillar-title">Hand Finishing</div>
+                        <div class="pillar-desc">Every hem, every button, every lining is finished by hand. Invisible to
+                            most — essential to us.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── EDITORIAL PULL QUOTE ── -->
+    <div class="editorial">
+        <p class="editorial-text">
+            "Luxury is not a price — it is a <span>presence</span>. A garment that arrives before you do."
+        </p>
+        <div class="editorial-right">
+            <div class="editorial-collection">RML Atelier — 2025</div>
+            <a href="bespoke.html" class="btn-primary">Discover Bespoke</a>
+        </div>
+    </div>
+
+    <!-- ── BENEFITS ── -->
+    <div class="benefits">
+        <div class="benefit reveal">
+            <div class="benefit-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <path d="M5 12H19M12 5l7 7-7 7" />
+                </svg>
+            </div>
+            <div>
+                <div class="benefit-title">Fast Delivery</div>
+                <div class="benefit-desc">We ensure your order is shipped with the utmost care and speed.</div>
+            </div>
+        </div>
+        <div class="benefit reveal reveal-delay-1">
+            <div class="benefit-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <rect x="1" y="3" width="15" height="13" rx="1" />
+                    <path d="M16 8h4l3 5v3h-7V8z" />
+                    <circle cx="5.5" cy="18.5" r="2.5" />
+                    <circle cx="18.5" cy="18.5" r="2.5" />
+                </svg>
+            </div>
+            <div>
+                <div class="benefit-title">Free Shipping</div>
+                <div class="benefit-desc">Enjoy our free shipping service. Fast. Reliable. Free.</div>
+            </div>
+        </div>
+        <div class="benefit reveal reveal-delay-2">
+            <div class="benefit-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <path d="M9 12l2 2 4-4" />
+                    <circle cx="12" cy="12" r="10" />
+                </svg>
+            </div>
+            <div>
+                <div class="benefit-title">Money-Back Guaranteed</div>
+                <div class="benefit-desc">We stand by our creations, and will provide a full refund if you are not
+                    delighted.</div>
+            </div>
+        </div>
+        <div class="benefit reveal reveal-delay-3">
+            <div class="benefit-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <path
+                        d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 7.17 19.79 19.79 0 01.88 3.54 2 2 0 012.88 1.5h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 9.91A16 16 0 0016 18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                </svg>
+            </div>
+            <div>
+                <div class="benefit-title">Personalized Assistance</div>
+                <div class="benefit-desc">Our team is at your service. Contact us with any inquiries you may
+                    have.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── TRENDING ── -->
+    <section class="trending">
+        <div class="trending-header reveal">
+            <div class="section-label">Trending</div>
+            <h2 class="section-title">The Latest in <em>Chic</em></h2>
+        </div>
+        <div class="trending-grid">
+            <div class="trend-card reveal">
+                <div class="trend-img">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9424.webp" alt="Velvet Tide"
+                        loading="lazy">
+                    <div class="trend-hover-overlay">
+                        <a href="#" class="btn-primary" style="font-size:9px; padding:12px 24px;">Select Options</a>
+                    </div>
+                </div>
+                <div class="trend-info">
+                    <span class="trend-name">Velvet Tide</span>
+                    <span class="trend-price">€ 1,100</span>
+                </div>
+                <div class="size-tags"><span>S</span><span>M</span></div>
+            </div>
+            <div class="trend-card reveal reveal-delay-1">
+                <div class="trend-img">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9443.webp"
+                        alt="Gilded Divinity" loading="lazy">
+                    <div class="trend-hover-overlay">
+                        <a href="#" class="btn-primary" style="font-size:9px; padding:12px 24px;">Select Options</a>
+                    </div>
+                </div>
+                <div class="trend-info">
+                    <span class="trend-name">Gilded Divinity</span>
+                    <span class="trend-price">€ 3,000</span>
+                </div>
+                <div class="size-tags"><span>S</span><span>M</span></div>
+            </div>
+            <div class="trend-card reveal reveal-delay-2">
+                <div class="trend-img">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9458.webp"
+                        alt="Cocoa Luminara" loading="lazy">
+                    <div class="trend-hover-overlay">
+                        <a href="#" class="btn-primary" style="font-size:9px; padding:12px 24px;">Select Options</a>
+                    </div>
+                </div>
+                <div class="trend-info">
+                    <span class="trend-name">Cocoa Luminara</span>
+                    <span class="trend-price">€ 1,100</span>
+                </div>
+                <div class="size-tags"><span>S</span><span>M</span><span>L</span></div>
+            </div>
+            <div class="trend-card reveal reveal-delay-3">
+                <div class="trend-img">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9386.webp" alt="Emma's Ember"
+                        loading="lazy">
+                    <div class="trend-hover-overlay">
+                        <a href="collections.html" class="btn-primary" style="font-size:9px; padding:12px 24px;">Select
+                            Options</a>
+                    </div>
+                </div>
+                <div class="trend-info">
+                    <span class="trend-name">Emma's Ember</span>
+                    <span class="trend-price">€ 3,000</span>
+                </div>
+                <div class="size-tags"><span>S</span><span>M</span><span>L</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── DESIGNER ── -->
+    <section class="designer">
+        <div class="designer-img reveal">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2026/03/roberto-mendoza-003.jpeg.webp"
+                alt="Roberto Mendoza" loading="lazy">
+            <div class="designer-img-label">The Designer</div>
+        </div>
+        <div class="designer-text reveal reveal-delay-1">
+            <div class="section-label">The Artisan</div>
+            <h2 class="section-title">Roberto<br><em>Mendoza</em></h2>
+            <blockquote class="designer-quote">
+                My work is driven by the female form: the curves, the structure, the movement. I sculpt silhouettes that
+                honor the body, elevate it, and celebrate its strength.
+            </blockquote>
+            <p class="designer-desc">
+                Every line is intentional. Every detail is placed with purpose. I create each piece by hand, guided by
+                instinct, precision, and emotion. A woman wearing Roberto Mendoza does not blend in — she arrives.
+            </p>
+            <a href="maison.html" class="btn-primary"
+                style="margin-top:32px; display:inline-block; background:var(--ink); color:var(--warm-white);">Meet the
+                Designer</a>
+        </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ── -->
+    <section class="testimonials">
+        <div class="testimonials-header reveal">
+            <div class="section-label" style="justify-content:center; margin-bottom: 16px;">
+                <span>Client Stories</span>
+            </div>
+            <h2 class="section-title" style="text-align:center;">Voices of the <em>Maison</em></h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial reveal lift">
+                <p class="testimonial-text">I have worn many houses, but only RML makes me feel like the garment was
+                    waiting for me — not the other way around.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SA</div>
+                    <div>
+                        <div class="author-name">Sofia A.</div>
+                        <div class="author-title">Milan, Italy</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial reveal reveal-delay-1 lift">
+                <p class="testimonial-text">There is no word for what this coat does. It simply makes everything else
+                    disappear. Absolute silence in the finest fabric.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MC</div>
+                    <div>
+                        <div class="author-name">Margot C.</div>
+                        <div class="author-title">Paris, France</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial reveal reveal-delay-2 lift">
+                <p class="testimonial-text">They spent four hours understanding how I move before they began. That is
+                    what sets this atelier apart from any other.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">LT</div>
+                    <div>
+                        <div class="author-name">Layla T.</div>
+                        <div class="author-title">Dubai, UAE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── NEWSLETTER ── -->
+    <section class="newsletter">
+        <p class="newsletter-eyebrow">Private Circle</p>
+        <h2 class="newsletter-title">First to the<br>Atelier</h2>
+        <p class="newsletter-sub">
+            Private previews. New collections before the world.<br>
+            Invitations to our seasonal salons.
+        </p>
+        <div class="newsletter-form">
+            <input class="newsletter-input" type="email" placeholder="Your email address">
+            <button class="newsletter-btn">Join</button>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <div class="footer-gold-bar"></div>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">RML ATELIER</a>
+                <p class="footer-desc">A maison built on the patience of the hand and the permanence of beauty.
+                    Garments that outlive their season.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61576216606576" class="footer-social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/roberto_mendoza_latelier_" class="footer-social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Collections</div>
+                <ul class="footer-links">
+                    <li><a href="collections.html">New Arrivals</a></li>
+                    <li><a href="collections.html">Eveningwear</a></li>
+                    <li><a href="collections.html">Gowns</a></li>
+                    <li><a href="collections.html">Dresses</a></li>
+                    <li><a href="collections.html">Exclusive Design</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Maison</div>
+                <ul class="footer-links">
+                    <li><a href="maison.html">Our Story</a></li>
+                    <li><a href="maison.html">The Designer</a></li>
+                    <li><a href="bespoke.html">Bespoke Service</a></li>
+                    <li><a href="journal.html">Journal</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Contact Us</div>
+                <ul class="footer-links">
+                    <li><a href="#">2 Park Street, Dublin — Ireland</a></li>
+                    <li><a href="mailto:roberto.mendoza@rmlatelier.com">roberto.mendoza@rmlatelier.com</a></li>
+                    <li><a href="tel:+353834365947">Ireland: +353 83 436 5947</a></li>
+                    <li><a href="tel:+35679610590">Malta: +356 7961 0590</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 Roberto Mendoza. All rights reserved.</p>
+            <p class="footer-copy" style="letter-spacing:0.05em;">Privacy · Legal · Terms</p>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+
+</html>

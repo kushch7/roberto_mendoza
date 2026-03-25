@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal — RML Atelier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Didact+Gothic&family=Cinzel:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+        <a href="index.html" class="mobile-logo">RML ATELIER</a>
+        <nav class="mobile-links">
+            <a href="collections.html">Collections</a>
+            <a href="maison.html">Maison</a>
+            <a href="bespoke.html">Bespoke</a>
+            <a href="journal.html">Journal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="mobile-nav-footer">
+            <p>2 Park Street, Dublin — Ireland</p>
+            <a href="mailto:roberto.mendoza@rmlatelier.com">roberto.mendoza@rmlatelier.com</a>
+        </div>
+    </div>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- Header -->
+    <header id="header" class="preset-scrolled">
+        <a href="index.html" class="logo">RML ATELIER</a>
+        <nav>
+            <a href="collections.html">Collections</a>
+            <a href="maison.html">Maison</a>
+            <a href="bespoke.html">Bespoke</a>
+            <a href="journal.html">Journal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-icons">
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <circle cx="11" cy="11" r="8" />
+                <path d="M21 21l-4.35-4.35" />
+            </svg>
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <button class="hamburger" id="hamburger"
+                aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <div class="page-hero-label">The Atelier</div>
+        <h1 class="page-hero-title">The <em>Journal</em></h1>
+        <p class="page-hero-sub">Essays on beauty, craft, and the enduring power of the well-made thing. From the
+            atelier, for the woman who knows what she wants.</p>
+    </div>
+
+    <!-- Journal Grid -->
+    <section class="journal-section">
+        <div class="journal-grid">
+
+            <!-- Article 1 — featured (spans 2 cols) -->
+            <article class="journal-card reveal">
+                <div class="journal-card-img">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9335.webp"
+                        alt="The Art of Presence" loading="lazy">
+                </div>
+                <div class="journal-card-body">
+                    <div class="journal-tag">Editorial</div>
+                    <h2 class="journal-card-title">The Art of <em>Presence</em></h2>
+                    <p class="journal-card-excerpt">There is a moment — just before you enter a room — when everything
+                        is still possible. The right garment does not change that moment. It extends it indefinitely. We
+                        consider the architecture of presence: how fabric, silhouette, and intention conspire to make a
+                        woman unforgettable before she has spoken a word.</p>
+                    <div class="journal-card-meta">
+                        <span>March 2026</span>
+                        <a href="#" class="journal-read-more">Read</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="journal-card reveal reveal-delay-1">
+                <div class="journal-card-img">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9386.webp"
+                        alt="Fabric, Form & Feeling" loading="lazy">
+                </div>
+                <div class="journal-card-body">
+                    <div class="journal-tag">Craft</div>
+                    <h2 class="journal-card-title">Fabric, Form &<br><em>Feeling</em></h2>
+                    <p class="journal-card-excerpt">The fabric comes first. Before the sketch, before the pattern,
+                        before the first cut — the fabric speaks. Roberto Mendoza on choosing materials that move with
+                        the body and speak a language of their own.</p>
+                    <div class="journal-card-meta">
+                        <span>February 2026</span>
+                        <a href="#" class="journal-read-more">Read</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="journal-card reveal reveal-delay-2">
+                <div class="journal-card-img">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9376.webp"
+                        alt="The Woman Who Arrives" loading="lazy">
+                </div>
+                <div class="journal-card-body">
+                    <div class="journal-tag">Philosophy</div>
+                    <h2 class="journal-card-title">The Woman<br>Who <em>Arrives</em></h2>
+                    <p class="journal-card-excerpt">She does not wait to be noticed. She arrives. On the woman at the
+                        centre of every RML design — her confidence, her silence, her certainty. The Black Provocateur
+                        collection, and the story of its making.</p>
+                    <div class="journal-card-meta">
+                        <span>January 2026</span>
+                        <a href="#" class="journal-read-more">Read</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="journal-card reveal">
+                <div class="journal-card-img">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9445.webp"
+                        alt="Gold & Devotion" loading="lazy">
+                </div>
+                <div class="journal-card-body">
+                    <div class="journal-tag">Collection</div>
+                    <h2 class="journal-card-title">Gold &<br><em>Devotion</em></h2>
+                    <p class="journal-card-excerpt">Gilded Divinity began with a single spool of hand-dyed metallic
+                        thread. From that thread: a gown. On the devotion that couture demands — and the gold it
+                        returns.</p>
+                    <div class="journal-card-meta">
+                        <span>December 2025</span>
+                        <a href="#" class="journal-read-more">Read</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="journal-card reveal reveal-delay-1">
+                <div class="journal-card-img">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9359.webp"
+                        alt="Pearl & Mythology" loading="lazy">
+                </div>
+                <div class="journal-card-body">
+                    <div class="journal-tag">Story</div>
+                    <h2 class="journal-card-title">Pearl &<br><em>Mythology</em></h2>
+                    <p class="journal-card-excerpt">Medea is a name that carries centuries. On the naming of a gown —
+                        and why some garments deserve to carry the weight of a myth. The creation of our most quietly
+                        powerful piece.</p>
+                    <div class="journal-card-meta">
+                        <span>November 2025</span>
+                        <a href="#" class="journal-read-more">Read</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="journal-card reveal reveal-delay-2">
+                <div class="journal-card-img">
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9425.webp"
+                        alt="Velvet Tide: Movement as Luxury" loading="lazy">
+                </div>
+                <div class="journal-card-body">
+                    <div class="journal-tag">Fabric</div>
+                    <h2 class="journal-card-title">Movement as<br><em>Luxury</em></h2>
+                    <p class="journal-card-excerpt">Velvet Tide was designed to move. Not to drape, not to hold — to
+                        move. On the forgotten luxury of fabric in motion, and how the Velvet Tide collection was built
+                        from the ground up around a single principle: fluidity.</p>
+                    <div class="journal-card-meta">
+                        <span>October 2025</span>
+                        <a href="#" class="journal-read-more">Read</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <p class="newsletter-eyebrow">Private Circle</p>
+        <h2 class="newsletter-title">First to the<br>Atelier</h2>
+        <p class="newsletter-sub">Private previews. New collections before the world.<br>Invitations to our seasonal
+            salons.</p>
+        <div class="newsletter-form">
+            <input class="newsletter-input" type="email" placeholder="Your email address">
+            <button class="newsletter-btn">Join</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-gold-bar"></div>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">RML ATELIER</a>
+                <p class="footer-desc">A maison built on the patience of the hand and the permanence of beauty. Garments
+                    that outlive their season.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61576216606576" class="footer-social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="16" height="16"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/roberto_mendoza_latelier_" class="footer-social-link"
+                        target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg></a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Collections</div>
+                <ul class="footer-links">
+                    <li><a href="collections.html">New Arrivals</a></li>
+                    <li><a href="collections.html">Eveningwear</a></li>
+                    <li><a href="collections.html">Gowns</a></li>
+                    <li><a href="collections.html">Dresses</a></li>
+                    <li><a href="collections.html">Exclusive Design</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Maison</div>
+                <ul class="footer-links">
+                    <li><a href="maison.html">Our Story</a></li>
+                    <li><a href="maison.html">The Designer</a></li>
+                    <li><a href="bespoke.html">Bespoke Service</a></li>
+                    <li><a href="journal.html">Journal</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Contact Us</div>
+                <ul class="footer-links">
+                    <li><a href="#">2 Park Street, Dublin — Ireland</a></li>
+                    <li><a href="mailto:roberto.mendoza@rmlatelier.com">roberto.mendoza@rmlatelier.com</a></li>
+                    <li><a href="tel:+353834365947">Ireland: +353 83 436 5947</a></li>
+                    <li><a href="tel:+35679610590">Malta: +356 7961 0590</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 Roberto Mendoza. All rights reserved.</p>
+            <p class="footer-copy" style="letter-spacing:0.05em;">Privacy · Legal · Terms</p>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+
+</html>

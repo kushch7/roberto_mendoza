@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RML Atelier — Haute Couture</title>
+    <meta name="description"
+        content="Roberto Mendoza Latelier. Bespoke haute couture from Dublin — garments that outlive their season. 8 exclusive pieces, made by hand.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Didact+Gothic&family=Cinzel:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ── RESET & VARIABLES ── */
+        :root {
+            --ink: #0a0908;
+            --ink2: #0e0d0b;
+            --charcoal: #181614;
+            --bone: #f5f0e8;
+            --cream: #faf7f2;
+            --gold: #b8965a;
+            --gold-light: #d4af72;
+            --gold-faint: rgba(184, 150, 90, 0.12);
+            --ash: #9a9490;
+            --warm-white: #fffef9;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background: var(--ink);
+            color: var(--warm-white);
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 13px;
+            line-height: 1.65;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* ── CUSTOM CURSOR ── */
+        .cursor {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width .22s, height .22s, background .22s;
+            will-change: left, top;
+        }
+
+        .cursor-ring {
+            position: fixed;
+            width: 34px;
+            height: 34px;
+            border: 1px solid rgba(184, 150, 90, 0.55);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: width .3s, height .3s;
+            will-change: left, top;
+        }
+
+        /* ── SCROLL REVEAL ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(46px);
+            transition: opacity .95s cubic-bezier(.25, .46, .45, .94),
+                transform .95s cubic-bezier(.25, .46, .45, .94);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .d1 {
+            transition-delay: .13s;
+        }
+
+        .d2 {
+            transition-delay: .26s;
+        }
+
+        .d3 {
+            transition-delay: .39s;
+        }
+
+        .d4 {
+            transition-delay: .52s;
+        }
+
+        /* ── NAV ── */
+        .lnav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 500;
+            padding: 32px 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: padding .4s ease, background .4s ease, border-color .4s ease;
+        }
+
+        .lnav.compact {
+            padding: 18px 64px;
+            background: rgba(10, 9, 8, 0.94);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--gold-faint);
+        }
+
+        .lnav-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            letter-spacing: .4em;
+            color: var(--warm-white);
+            text-decoration: none;
+        }
+
+        .lnav-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .lnav-link {
+            font-size: 10px;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .45);
+            text-decoration: none;
+            transition: color .3s;
+        }
+
+        .lnav-link:hover {
+            color: var(--warm-white);
+        }
+
+        .lnav-cta {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--gold);
+            color: var(--ink);
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 9px;
+            letter-spacing: .35em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background .3s;
+        }
+
+        .lnav-cta:hover {
+            background: var(--gold-light);
+        }
+
+        /* ── SHARED COMPONENTS ── */
+        .section-tag {
+            font-size: 9px;
+            letter-spacing: .5em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .section-tag::before {
+            content: '';
+            width: 28px;
+            height: 1px;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .section-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(36px, 5vw, 68px);
+            font-weight: 300;
+            line-height: .93;
+            color: var(--warm-white);
+        }
+
+        .section-heading em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .section-heading-ink {
+            color: var(--ink);
+        }
+
+        .section-heading-ink em {
+            color: var(--gold);
+        }
+
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 17px 36px;
+            background: var(--gold);
+            color: var(--ink);
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 9px;
+            letter-spacing: .35em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background .3s;
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+        }
+
+        .btn-gold svg {
+            transition: transform .3s;
+        }
+
+        .btn-gold:hover svg {
+            transform: translateX(5px);
+        }
+
+        .btn-line {
+            font-size: 9px;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .45);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, .2);
+            padding-bottom: 3px;
+            transition: color .3s, border-color .3s;
+        }
+
+        .btn-line:hover {
+            color: var(--warm-white);
+            border-color: rgba(255, 255, 255, .7);
+        }
+
+        .btn-outline-gold {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 52px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 10px;
+            letter-spacing: .4em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background .4s, color .4s;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: var(--ink);
+        }
+
+        .btn-outline-gold svg {
+            transition: transform .3s;
+        }
+
+        .btn-outline-gold:hover svg {
+            transform: translateX(5px);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            height: 100vh;
+            min-height: 720px;
+            display: grid;
+            grid-template-columns: 56% 44%;
+            position: relative;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 72px 88px 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Vertical gold line accent */
+        .hero-left::before {
+            content: '';
+            position: absolute;
+            left: 56px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(to bottom,
+                    transparent 0%,
+                    rgba(184, 150, 90, .5) 25%,
+                    rgba(184, 150, 90, .5) 75%,
+                    transparent 100%);
+        }
+
+        .hero-eyebrow {
+            font-size: 9px;
+            letter-spacing: .55em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            width: 36px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(64px, 9.5vw, 136px);
+            font-weight: 300;
+            line-height: .87;
+            color: var(--warm-white);
+            letter-spacing: -.01em;
+            margin-bottom: 40px;
+        }
+
+        .hero-title em {
+            display: block;
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .hero-body {
+            font-size: 12px;
+            line-height: 2;
+            color: rgba(255, 255, 255, .38);
+            max-width: 360px;
+            margin-bottom: 48px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 72px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 44px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, .06);
+        }
+
+        .hero-stat-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 30px;
+            font-weight: 300;
+            color: var(--warm-white);
+        }
+
+        .hero-stat-label {
+            font-size: 9px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--ash);
+            margin-top: 5px;
+        }
+
+        .hero-right {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        /* Shadow bleed onto right image from left */
+        .hero-right::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, var(--ink) 0%, transparent 35%);
+            z-index: 1;
+        }
+
+        /* Vertical caption on image */
+        .hero-img-caption {
+            position: absolute;
+            bottom: 48px;
+            right: 28px;
+            z-index: 2;
+            writing-mode: vertical-rl;
+            font-size: 9px;
+            letter-spacing: .4em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .22);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 44px;
+            left: 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            z-index: 10;
+        }
+
+        .hero-scroll-line {
+            width: 1px;
+            height: 56px;
+            background: linear-gradient(to bottom, transparent, var(--gold));
+            transform-origin: top;
+            animation: tickScroll 2.6s ease-in-out infinite;
+        }
+
+        @keyframes tickScroll {
+            0% {
+                transform: scaleY(0);
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: scaleY(1);
+                opacity: 0;
+            }
+        }
+
+        .hero-scroll-word {
+            font-size: 8px;
+            letter-spacing: .5em;
+            text-transform: uppercase;
+            color: var(--ash);
+            writing-mode: vertical-rl;
+        }
+
+        /* ── MARQUEE ── */
+        .marquee-strip {
+            background: var(--charcoal);
+            border-top: 1px solid var(--gold-faint);
+            border-bottom: 1px solid var(--gold-faint);
+            padding: 15px 0;
+            overflow: hidden;
+            cursor: default;
+        }
+
+        .marquee-track {
+            display: flex;
+            white-space: nowrap;
+            animation: marqueeSpin 50s linear infinite;
+        }
+
+        .marquee-strip:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        .marquee-segment {
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+            padding: 0 28px;
+            gap: 36px;
+        }
+
+        .mq-word {
+            font-size: 9px;
+            letter-spacing: .45em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .28);
+        }
+
+        .mq-gem {
+            color: var(--gold);
+            font-size: 7px;
+            opacity: .65;
+        }
+
+        @keyframes marqueeSpin {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ── EDITORIAL TRIPTYCH ── */
+        .editorial {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            grid-template-rows: 1fr 1fr;
+            height: 88vh;
+            min-height: 560px;
+            gap: 2px;
+            background: var(--ink);
+        }
+
+        .ed-block {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ed-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .85s cubic-bezier(.25, .46, .45, .94);
+        }
+
+        .ed-block:hover img {
+            transform: scale(1.05);
+        }
+
+        .ed-1 {
+            grid-row: span 2;
+        }
+
+        .ed-1 img {
+            object-position: center top;
+        }
+
+        .ed-2 img {
+            object-position: center 35%;
+        }
+
+        .ed-3 img {
+            object-position: center top;
+        }
+
+        /* Bottom gradient overlay */
+        .ed-block::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 9, 8, .8) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .ed-caption {
+            position: absolute;
+            bottom: 28px;
+            left: 28px;
+            z-index: 2;
+        }
+
+        .ed-cap-tag {
+            font-size: 8px;
+            letter-spacing: .35em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 7px;
+        }
+
+        .ed-cap-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--warm-white);
+            line-height: 1.15;
+        }
+
+        .ed-cap-name em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        /* ── MANIFESTO ── */
+        .manifesto {
+            background: var(--cream);
+            padding: 148px 64px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Giant watermark */
+        .manifesto::before {
+            content: 'ATELIER';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Cinzel', serif;
+            font-size: clamp(80px, 19vw, 260px);
+            font-weight: 300;
+            color: rgba(184, 150, 90, .055);
+            white-space: nowrap;
+            letter-spacing: .25em;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .manifesto-tag {
+            font-size: 9px;
+            letter-spacing: .55em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 52px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .manifesto-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(28px, 4.5vw, 62px);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--ink);
+            line-height: 1.28;
+            max-width: 1080px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .manifesto-rule {
+            width: 56px;
+            height: 1px;
+            background: var(--gold);
+            margin: 52px auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .manifesto-attribution {
+            font-size: 10px;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+            color: var(--ash);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── COLLECTION STRIP ── */
+        .collection-section {
+            padding: 100px 64px 120px;
+            background: var(--ink2);
+        }
+
+        .collection-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 64px;
+        }
+
+        .collection-header-left {
+            max-width: 400px;
+        }
+
+        .view-all-link {
+            font-size: 10px;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+            white-space: nowrap;
+            align-self: flex-end;
+            transition: color .3s;
+        }
+
+        .view-all-link:hover {
+            color: var(--gold-light);
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        .col-item {
+            position: relative;
+        }
+
+        .col-item-img {
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .col-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform .8s cubic-bezier(.25, .46, .45, .94);
+        }
+
+        .col-item:hover .col-item-img img {
+            transform: scale(1.07);
+        }
+
+        .col-num {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            z-index: 2;
+            font-family: 'Cinzel', serif;
+            font-size: 9px;
+            letter-spacing: .3em;
+            color: rgba(255, 255, 255, .4);
+        }
+
+        /* Hover overlay with CTA */
+        .col-item-hover {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 9, 8, .55);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+            transition: opacity .4s;
+        }
+
+        .col-item:hover .col-item-hover {
+            opacity: 1;
+        }
+
+        .col-item-hover-text {
+            font-size: 9px;
+            letter-spacing: .4em;
+            text-transform: uppercase;
+            color: var(--warm-white);
+            border-bottom: 1px solid rgba(255, 255, 255, .4);
+            padding-bottom: 3px;
+        }
+
+        .col-item-info {
+            padding: 20px 0 4px;
+        }
+
+        .col-cat {
+            font-size: 9px;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .col-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 23px;
+            font-weight: 300;
+            color: var(--warm-white);
+        }
+
+        .col-price {
+            font-size: 11px;
+            color: var(--ash);
+            margin-top: 5px;
+        }
+
+        /* ── VALUES STRIP ── */
+        .values-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: var(--charcoal);
+            border-top: 1px solid rgba(255, 255, 255, .04);
+        }
+
+        .val-cell {
+            padding: 68px 56px;
+            border-right: 1px solid rgba(255, 255, 255, .05);
+        }
+
+        .val-cell:last-child {
+            border-right: none;
+        }
+
+        .val-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 54px;
+            font-weight: 300;
+            color: rgba(184, 150, 90, .18);
+            line-height: 1;
+            margin-bottom: 28px;
+        }
+
+        .val-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 300;
+            color: var(--warm-white);
+            margin-bottom: 14px;
+        }
+
+        .val-body {
+            font-size: 12px;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, .32);
+        }
+
+        /* ── DESIGNER SECTION ── */
+        .designer-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 86vh;
+        }
+
+        .designer-photo {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .designer-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        /* Bleed into right panel */
+        .designer-photo::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, transparent 55%, var(--charcoal));
+        }
+
+        .designer-content {
+            background: var(--charcoal);
+            padding: 120px 84px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .designer-tag {
+            font-size: 9px;
+            letter-spacing: .45em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 48px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .designer-tag::before {
+            content: '';
+            width: 36px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .designer-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(24px, 3.2vw, 46px);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--warm-white);
+            line-height: 1.3;
+            margin-bottom: 48px;
+            max-width: 430px;
+        }
+
+        .designer-bio {
+            font-size: 12px;
+            line-height: 2;
+            color: rgba(255, 255, 255, .35);
+            max-width: 420px;
+            margin-bottom: 52px;
+        }
+
+        .designer-sig {
+            font-family: 'Cinzel', serif;
+            font-size: 10px;
+            letter-spacing: .35em;
+            color: var(--gold);
+        }
+
+        /* ── BESPOKE TEASER STRIP ── */
+        .bespoke-strip {
+            background: var(--ink);
+            padding: 88px 64px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            border-top: 1px solid var(--gold-faint);
+            border-bottom: 1px solid var(--gold-faint);
+        }
+
+        .bespoke-strip-img {
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+        }
+
+        .bespoke-strip-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .bespoke-strip-content .section-tag {
+            margin-bottom: 20px;
+        }
+
+        .bespoke-strip-body {
+            font-size: 12px;
+            line-height: 2;
+            color: rgba(255, 255, 255, .4);
+            margin-top: 28px;
+            margin-bottom: 44px;
+            max-width: 420px;
+        }
+
+        /* ── ENTER SECTION ── */
+        .enter-section {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .enter-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .enter-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            filter: brightness(.13) saturate(.7);
+        }
+
+        .enter-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(10, 9, 8, .25) 0%, rgba(10, 9, 8, .85) 100%);
+        }
+
+        .enter-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 680px;
+            padding: 0 40px;
+        }
+
+        .enter-tag {
+            font-size: 9px;
+            letter-spacing: .7em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 44px;
+        }
+
+        .enter-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(60px, 11vw, 150px);
+            font-weight: 300;
+            line-height: .86;
+            color: var(--warm-white);
+            margin-bottom: 44px;
+            letter-spacing: -.01em;
+        }
+
+        .enter-title em {
+            display: block;
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .enter-sub {
+            font-size: 11px;
+            letter-spacing: .14em;
+            color: rgba(255, 255, 255, .28);
+            margin-bottom: 60px;
+            line-height: 2;
+        }
+
+        .enter-detail {
+            margin-top: 48px;
+            font-size: 9px;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .16);
+        }
+
+        .enter-detail strong {
+            color: rgba(255, 255, 255, .34);
+            font-weight: normal;
+        }
+
+        /* ── FOOTER ── */
+        .lfoot {
+            background: var(--ink);
+            padding: 36px 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, .04);
+            gap: 20px;
+        }
+
+        .lfoot-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            letter-spacing: .4em;
+            color: rgba(255, 255, 255, .22);
+            text-decoration: none;
+        }
+
+        .lfoot-copy {
+            font-size: 10px;
+            letter-spacing: .1em;
+            color: rgba(255, 255, 255, .15);
+        }
+
+        .lfoot-social {
+            display: flex;
+            gap: 28px;
+        }
+
+        .lfoot-social a {
+            font-size: 9px;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .22);
+            text-decoration: none;
+            transition: color .3s;
+        }
+
+        .lfoot-social a:hover {
+            color: var(--gold);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1100px) {
+
+            .lnav,
+            .lnav.compact {
+                padding-left: 36px;
+                padding-right: 36px;
+            }
+
+            .hero-left {
+                padding: 0 52px 80px 60px;
+            }
+
+            .hero-left::before {
+                left: 36px;
+            }
+
+            .hero-scroll {
+                left: 18px;
+            }
+
+            .collection-section {
+                padding: 80px 36px 100px;
+            }
+
+            .bespoke-strip {
+                padding: 80px 36px;
+            }
+        }
+
+        @media (max-width: 980px) {
+            .lnav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                background: url('https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9443.webp') center top / cover no-repeat;
+                position: relative;
+            }
+
+            .hero::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to right,
+                        rgba(10, 9, 8, .95) 55%,
+                        rgba(10, 9, 8, .6));
+                z-index: 0;
+            }
+
+            .hero-left {
+                position: relative;
+                z-index: 1;
+                padding: 0 36px 80px 52px;
+                padding-top: 120px;
+            }
+
+            .hero-left::before {
+                left: 28px;
+            }
+
+            .hero-right {
+                display: none;
+            }
+
+            .hero-scroll {
+                left: 16px;
+                z-index: 2;
+            }
+
+            .editorial {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                height: auto;
+            }
+
+            .ed-1 {
+                grid-row: span 1;
+                height: 75vw;
+            }
+
+            .ed-2,
+            .ed-3 {
+                height: 60vw;
+            }
+
+            .manifesto {
+                padding: 100px 36px;
+            }
+
+            .collection-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .collection-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+            }
+
+            .values-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .val-cell {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, .05);
+                padding: 56px 36px;
+            }
+
+            .val-cell:last-child {
+                border-bottom: none;
+            }
+
+            .designer-split {
+                grid-template-columns: 1fr;
+            }
+
+            .designer-photo {
+                height: 70vw;
+            }
+
+            .designer-content {
+                padding: 64px 36px;
+            }
+
+            .bespoke-strip {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                padding: 80px 36px;
+            }
+
+            .bespoke-strip-img {
+                aspect-ratio: 3 / 2;
+            }
+
+            .lfoot {
+                flex-direction: column;
+                text-align: center;
+                padding: 32px 28px;
+                gap: 14px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .lnav,
+            .lnav.compact {
+                padding: 18px 24px;
+            }
+
+            .hero-left {
+                padding: 0 24px 72px 36px;
+                padding-top: 100px;
+            }
+
+            .hero-left::before {
+                left: 16px;
+            }
+
+            .hero-scroll {
+                left: 12px;
+            }
+
+            .hero-title {
+                font-size: clamp(52px, 15vw, 80px);
+            }
+
+            .hero-stats {
+                gap: 24px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .manifesto {
+                padding: 80px 24px;
+            }
+
+            .collection-section {
+                padding: 72px 24px 88px;
+            }
+
+            .collection-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .val-cell {
+                padding: 48px 24px;
+            }
+
+            .designer-content {
+                padding: 52px 24px;
+            }
+
+            .bespoke-strip {
+                padding: 64px 24px;
+            }
+
+            .enter-content {
+                padding: 0 24px;
+            }
+
+            .lfoot {
+                padding: 28px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── CURSOR ── -->
+    <div class="cursor" id="lCursor"></div>
+    <div class="cursor-ring" id="lCursorRing"></div>
+
+    <!-- ── NAV ── -->
+    <nav class="lnav" id="lnav">
+        <a href="https://www.rmlatelier.com/" class="lnav-logo">RML ATELIER</a>
+        <div class="lnav-links">
+            <a href="https://www.rmlatelier.com/shop/" class="lnav-link">Collections</a>
+            <a href="https://www.rmlatelier.com/maison/" class="lnav-link">Maison</a>
+            <a href="https://www.rmlatelier.com/bespoke/" class="lnav-link">Bespoke</a>
+            <a href="https://www.rmlatelier.com/contact/" class="lnav-link">Contact</a>
+        </div>
+        <a href="https://www.rmlatelier.com/" class="lnav-cta">Enter the Atelier</a>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-eyebrow reveal">Roberto Mendoza — Dublin</div>
+            <h1 class="hero-title reveal d1">
+                The art<br>
+                <em>of presence.</em>
+            </h1>
+            <p class="hero-body reveal d2">Haute couture built on the patience of the hand. Garments conceived for women
+                who do not apologize for their power — worn in every seam, felt in every entrance.</p>
+            <div class="hero-actions reveal d3">
+                <a href="https://www.rmlatelier.com/" class="btn-gold">
+                    Enter the Atelier
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </a>
+                <a href="https://www.rmlatelier.com/bespoke/" class="btn-line">Discover Bespoke</a>
+            </div>
+            <div class="hero-stats reveal d4">
+                <div class="hero-stat">
+                    <div class="hero-stat-num">8</div>
+                    <div class="hero-stat-label">Exclusive Pieces</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">16</div>
+                    <div class="hero-stat-label">Artisan Hands</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">100%</div>
+                    <div class="hero-stat-label">Handcrafted</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9443.webp"
+                alt="Gilded Divinity — RML Atelier">
+            <span class="hero-img-caption">Gilded Divinity — 2025</span>
+        </div>
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            <span class="hero-scroll-word">Scroll</span>
+        </div>
+    </section>
+
+    <!-- ── MARQUEE ── -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <div class="marquee-segment">
+                <span class="mq-word">Handcrafted Luxury</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Haute Couture</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Dublin, Ireland</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Bespoke Tailoring</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Roberto Mendoza</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Timeless Elegance</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Made to Measure</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Quiet Luxury</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Alta Costura</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Artisanal Excellence</span><span class="mq-gem">✦</span>
+            </div>
+            <div class="marquee-segment" aria-hidden="true">
+                <span class="mq-word">Handcrafted Luxury</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Haute Couture</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Dublin, Ireland</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Bespoke Tailoring</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Roberto Mendoza</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Timeless Elegance</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Made to Measure</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Quiet Luxury</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Alta Costura</span><span class="mq-gem">✦</span>
+                <span class="mq-word">Artisanal Excellence</span><span class="mq-gem">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── EDITORIAL TRIPTYCH ── -->
+    <div class="editorial">
+        <div class="ed-block ed-1 reveal">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9374.webp" alt="Black Provocateur">
+            <div class="ed-caption">
+                <div class="ed-cap-tag">Evening Designs</div>
+                <div class="ed-cap-name">Black <em>Provocateur</em></div>
+            </div>
+        </div>
+        <div class="ed-block ed-2 reveal d1">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9335.webp" alt="Champagne Reign">
+            <div class="ed-caption">
+                <div class="ed-cap-tag">Gowns</div>
+                <div class="ed-cap-name">Champagne <em>Reign</em></div>
+            </div>
+        </div>
+        <div class="ed-block ed-3 reveal d2">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9362.webp" alt="Medea">
+            <div class="ed-caption">
+                <div class="ed-cap-tag">Evening Designs</div>
+                <div class="ed-cap-name"><em>Medea</em></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── MANIFESTO ── -->
+    <section class="manifesto">
+        <div class="manifesto-tag reveal">The Roberto Mendoza Philosophy</div>
+        <blockquote class="manifesto-quote reveal d1">
+            "Every garment passes through sixteen hands before it reaches yours — and not one of those hands will move
+            until it is satisfied."
+        </blockquote>
+        <div class="manifesto-rule reveal d2"></div>
+        <div class="manifesto-attribution reveal d2">Roberto Mendoza — RML Atelier, Dublin</div>
+    </section>
+
+    <!-- ── COLLECTION STRIP ── -->
+    <section class="collection-section">
+        <div class="collection-header">
+            <div class="collection-header-left">
+                <div class="section-tag reveal">The Collection</div>
+                <h2 class="section-heading reveal d1">Selected<br><em>Pieces</em></h2>
+            </div>
+            <a href="https://www.rmlatelier.com/shop/" class="view-all-link reveal">View All 8 Pieces →</a>
+        </div>
+        <div class="collection-grid">
+            <div class="col-item reveal">
+                <div class="col-item-img">
+                    <span class="col-num">01</span>
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9387.webp" alt="Emma's Ember"
+                        loading="lazy">
+                    <div class="col-item-hover"><span class="col-item-hover-text">View Piece</span></div>
+                </div>
+                <div class="col-item-info">
+                    <div class="col-cat">Evening Designs</div>
+                    <div class="col-name">Emma's Ember</div>
+                    <div class="col-price">€ 3,000</div>
+                </div>
+            </div>
+            <div class="col-item reveal d1">
+                <div class="col-item-img">
+                    <span class="col-num">02</span>
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9405.webp" alt="Golden Oracle"
+                        loading="lazy">
+                    <div class="col-item-hover"><span class="col-item-hover-text">View Piece</span></div>
+                </div>
+                <div class="col-item-info">
+                    <div class="col-cat">Evening Designs</div>
+                    <div class="col-name">Golden Oracle</div>
+                    <div class="col-price">€ 2,800</div>
+                </div>
+            </div>
+            <div class="col-item reveal d2">
+                <div class="col-item-img">
+                    <span class="col-num">03</span>
+                    <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9424.webp" alt="Velvet Tide"
+                        loading="lazy">
+                    <div class="col-item-hover"><span class="col-item-hover-text">View Piece</span></div>
+                </div>
+                <div class="col-item-info">
+                    <div class="col-cat">Evening Designs</div>
+                    <div class="col-name">Velvet Tide</div>
+                    <div class="col-price">€ 2,200</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── VALUES STRIP ── -->
+    <div class="values-strip">
+        <div class="val-cell reveal">
+            <div class="val-num">01</div>
+            <div class="val-title">Elegance</div>
+            <p class="val-body">Not surface decoration but a structural quality. The silence between movements — the
+                line that needs no explanation.</p>
+        </div>
+        <div class="val-cell reveal d1">
+            <div class="val-num">02</div>
+            <div class="val-title">Permanence</div>
+            <p class="val-body">We do not design for seasons. We design for lifetimes. Each piece is built to outlast
+                any occasion it was made for.</p>
+        </div>
+        <div class="val-cell reveal d2">
+            <div class="val-num">03</div>
+            <div class="val-title">Presence</div>
+            <p class="val-body">A Roberto Mendoza garment arrives before you do. It is the confidence made visible — the
+                authority made wearable.</p>
+        </div>
+    </div>
+
+    <!-- ── DESIGNER ── -->
+    <div class="designer-split">
+        <div class="designer-photo">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2026/03/roberto-mendoza-003.jpeg.webp"
+                alt="Roberto Mendoza">
+        </div>
+        <div class="designer-content">
+            <div class="designer-tag reveal">The Designer</div>
+            <blockquote class="designer-quote reveal d1">
+                "I design for women who do not apologize for their power."
+            </blockquote>
+            <p class="designer-bio reveal d2">
+                Roberto Mendoza is a couturier whose work lives at the intersection of architecture and grace. Trained
+                in classical tailoring and deeply influenced by the great European maisons, he founded RML Atelier with
+                a singular conviction: that every woman deserves a garment conceived entirely for her.
+            </p>
+            <div class="designer-sig reveal d3">Roberto Mendoza — Founder &amp; Creative Director</div>
+        </div>
+    </div>
+
+    <!-- ── BESPOKE TEASER ── -->
+    <div class="bespoke-strip">
+        <div class="bespoke-strip-img reveal">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9386.webp"
+                alt="Emma's Ember — Bespoke" loading="lazy">
+        </div>
+        <div class="bespoke-strip-content reveal d1">
+            <div class="section-tag">Haute Couture</div>
+            <h2 class="section-heading" style="margin-bottom:0">Bespoke &amp;<br><em>Made to Measure</em></h2>
+            <p class="bespoke-strip-body">A dress created for one woman, and one woman only. We begin with a
+                conversation — not about trends, but about you. Who you are. How you move. What you wish to feel when
+                you enter a room.</p>
+            <a href="https://www.rmlatelier.com/bespoke/" class="btn-gold">
+                Discover Bespoke
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- ── ENTER CTA ── -->
+    <section class="enter-section">
+        <div class="enter-bg">
+            <img src="https://media.rmlatelier.com/wp-content/uploads/2025/12/IMG_9458.webp" alt="">
+        </div>
+        <div class="enter-content">
+            <div class="enter-tag reveal">RML Atelier — Est. 2025</div>
+            <h2 class="enter-title reveal d1">
+                The Atelier<br>
+                <em>Awaits.</em>
+            </h2>
+            <p class="enter-sub reveal d2">
+                8 exclusive pieces. Bespoke commissions open.<br>
+                Dublin, Ireland — Worldwide delivery.
+            </p>
+            <a href="https://www.rmlatelier.com/" class="btn-outline-gold reveal d3">
+                Enter the Atelier
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                </svg>
+            </a>
+            <div class="enter-detail reveal d4">
+                Explore <strong>8 pieces</strong> · Starting from <strong>€ 1,100</strong> · <strong>Free worldwide
+                    shipping</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="lfoot">
+        <a href="https://www.rmlatelier.com/" class="lfoot-logo">RML ATELIER</a>
+        <span class="lfoot-copy">© 2026 Roberto Mendoza. All rights reserved.</span>
+        <div class="lfoot-social">
+            <a href="https://www.instagram.com/roberto_mendoza_latelier_" target="_blank"
+                rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61576216606576" target="_blank"
+                rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.rmlatelier.com/contact/">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        // ── Custom cursor ──────────────────────────────────────────
+        (function () {
+            var cursor = document.getElementById('lCursor');
+            var ring = document.getElementById('lCursorRing');
+            if (!cursor || !ring) return;
+            var mx = 0, my = 0, rx = 0, ry = 0;
+            document.addEventListener('mousemove', function (e) {
+                mx = e.clientX; my = e.clientY;
+                cursor.style.left = mx + 'px';
+                cursor.style.top = my + 'px';
+            });
+            (function tick() {
+                rx += (mx - rx) * 0.1;
+                ry += (my - ry) * 0.1;
+                ring.style.left = rx + 'px';
+                ring.style.top = ry + 'px';
+                requestAnimationFrame(tick);
+            })();
+            document.querySelectorAll('a, button, .col-item, .ed-block, .val-cell').forEach(function (el) {
+                el.addEventListener('mouseenter', function () {
+                    cursor.style.width = '18px';
+                    cursor.style.height = '18px';
+                    ring.style.width = '52px';
+                    ring.style.height = '52px';
+                });
+                el.addEventListener('mouseleave', function () {
+                    cursor.style.width = '8px';
+                    cursor.style.height = '8px';
+                    ring.style.width = '34px';
+                    ring.style.height = '34px';
+                });
+            });
+        })();
+
+        // ── Nav compact on scroll ──────────────────────────────────
+        (function () {
+            var nav = document.getElementById('lnav');
+            if (!nav) return;
+            window.addEventListener('scroll', function () {
+                nav.classList.toggle('compact', window.scrollY > 60);
+            }, { passive: true });
+        })();
+
+        // ── Scroll reveal ──────────────────────────────────────────
+        (function () {
+            var els = document.querySelectorAll('.reveal');
+            if (!els.length) return;
+            var obs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) e.target.classList.add('visible');
+                });
+            }, { threshold: 0.07, rootMargin: '0px 0px -48px 0px' });
+            els.forEach(function (el) { obs.observe(el); });
+        })();
+    </script>
+
+</body>
+
+</html>
